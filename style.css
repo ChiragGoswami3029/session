@@ -142,6 +142,3 @@ h1 { margin: 0; font-size: clamp(2.8rem, 7vw, 6rem); font-weight: 400; letter-sp
     .details-grid { gap: 20px; flex-wrap: wrap; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
-}
