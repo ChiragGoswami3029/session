@@ -91,13 +91,39 @@ h1 { margin: 0; font-size: clamp(2.8rem, 7vw, 6rem); font-weight: 400; letter-sp
 
 @media (max-width: 560px) {
     .universe { padding-top: 6vh; }
-    .solar-system { min-height: 720px; margin-top: 4vh; }
-    .solar-system::before { top: 5%; bottom: 5%; left: 50%; width: 1px; height: auto; background: linear-gradient(transparent, var(--line), transparent); }
-    .planet-line { display: flex; flex-direction: column; justify-content: space-between; height: 720px; }
-    .planet { width: 100%; min-width: 0; height: 10%; }
-    .planet-name { top: auto; left: calc(50% + 58px); transform: translateY(-50%); }
-    .sun { width: 92px; height: 92px; }
-    .jupiter .planet-name, .saturn .planet-name { left: calc(50% + 68px); }
+    .solar-system { min-height: 260px; margin-top: 4vh; }
+    .solar-system::before {
+        top: 50%;
+        right: 4%;
+        bottom: auto;
+        left: 4%;
+        width: auto;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--line), transparent);
+    }
+    .planet-line {
+        display: grid;
+        grid-template-columns: repeat(9, minmax(0, 1fr));
+        align-items: center;
+        height: 260px;
+        gap: 4px;
+    }
+    .planet {
+        width: 100%;
+        min-width: 0;
+        height: 100%;
+    }
+    .planet-name {
+        top: calc(50% + 52px);
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+    }
+    .sun {
+        width: 92px;
+        height: 92px;
+    }
+    .jupiter .planet-name, .saturn .planet-name { left: 50%; }
     .legend { line-height: 1.8; }
     .planet-details { margin-top: 28px; padding: 20px; }
     .details-header { flex-direction: column; align-items: flex-start; }
