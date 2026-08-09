@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A visual tour of the planets in our solar system">
+    <title>Solar System Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="universe">
+        <header class="intro">
+            <p class="eyebrow">Solar system / orbital map</p>
+            <h1>Planet Explorer</h1>
+            <p class="subtitle">The planets, arranged in their order from the Sun.</p>
+            <button class="motion-toggle" id="motionToggle" type="button" aria-pressed="false">Pause orbits</button>
+        </header>
+
+        <section class="solar-system" aria-label="The solar system, with planets ordered from the Sun">
+            <button class="sun" type="button" data-planet="Sun" aria-label="Learn about the Sun"><span>Sun</span></button>
+            <ol class="planet-line">
+                <li class="planet mercury"><button class="planet-select" type="button" data-planet="Mercury" aria-label="Learn about Mercury"><span class="planet-body"></span><span class="planet-name">Mercury</span></button></li>
+                <li class="planet venus"><button class="planet-select" type="button" data-planet="Venus" aria-label="Learn about Venus"><span class="planet-body"></span><span class="planet-name">Venus</span></button></li>
+                <li class="planet earth"><button class="planet-select" type="button" data-planet="Earth" aria-label="Learn about Earth"><span class="planet-body"></span><span class="planet-name">Earth</span></button></li>
+                <li class="planet mars"><button class="planet-select" type="button" data-planet="Mars" aria-label="Learn about Mars"><span class="planet-body"></span><span class="planet-name">Mars</span></button></li>
+                <li class="planet jupiter"><button class="planet-select" type="button" data-planet="Jupiter" aria-label="Learn about Jupiter"><span class="planet-body"></span><span class="planet-name">Jupiter</span></button></li>
+                <li class="planet saturn"><button class="planet-select" type="button" data-planet="Saturn" aria-label="Learn about Saturn"><span class="planet-body"></span><span class="planet-ring"></span><span class="planet-name">Saturn</span></button></li>
+                <li class="planet uranus"><button class="planet-select" type="button" data-planet="Uranus" aria-label="Learn about Uranus"><span class="planet-body"></span><span class="planet-ring"></span><span class="planet-name">Uranus</span></button></li>
+                <li class="planet neptune"><button class="planet-select" type="button" data-planet="Neptune" aria-label="Learn about Neptune"><span class="planet-body"></span><span class="planet-name">Neptune</span></button></li>
+            </ol>
+        </section>
+
+        <section class="planet-details" id="planetDetails" aria-live="polite">
+            <div class="details-header">
+                <div>
+                    <p class="details-kicker">Transmission console</p>
+                    <h2>Select a planet or the Sun</h2>
+                </div>
+                <button class="reset-button" id="resetSelection" type="button">Reset selection</button>
+            </div>
+            <p>Click a planet or the Sun to zoom in and reveal a few cosmic facts.</p>
+        </section>
+
+        <footer class="legend"><span class="legend-line"></span> Mercury · Venus · Earth · Mars · Jupiter · Saturn · Uranus · Neptune</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
